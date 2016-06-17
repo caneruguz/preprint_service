@@ -17,6 +17,7 @@ export default Ember.Component.extend({
                     } else {
                         this.sendAction('filter', data.text);
                     }
+
                 }.bind(this)
             });
         }.bind(this));

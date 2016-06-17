@@ -7,7 +7,6 @@
 <div class="container" id="browse">
     <div class="row">
         <div class="col-lg-4">
-
             <!--"filter" is defined in the browse-preprints route-->
             <!--the taxonomy-tree calls sendAction("filter") with arguments that aren't explicitly defined here-->
             {{taxonomy-tree filter="filter"}}
@@ -23,10 +22,16 @@
             </div> <!--END SUBJECT TAGS DIV -->
 
         </div>
-        <div class="col-lg-8" id="preprintList">
-            {{#each filteredPreprints as |preprintEntry|}}
-                {{preprint-entry preprint=preprintEntry}}
-            {{/each}}
+        <div class="col-lg-8">
+            <div id="preprintList">
+                {{#each filteredPreprints as |preprintEntry|}}
+                    {{preprint-entry preprint=preprintEntry}}
+                {{/each}}
+            </div>
+            <div id="noResultsFound" style="display: none;">
+                <!--display switches to block when no preprints are found-->
+                <h2 class="text-muted text-center">No preprints found</h2>
+            </div>
         </div>
     </div>
 </div>

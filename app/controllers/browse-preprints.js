@@ -9,10 +9,16 @@ export default Ember.Controller.extend({
         var subject = this.get('subject');
         var preprints = this.get('model').preprints;
 
+        var result = preprints;
         if (subject) {
-            return preprints.filterBy('subject', subject);
-        } else {
-            return preprints;
+            result = preprints.filterBy('subject', subject);
         }
+        if (result.get('length') > 0) {
+            $('#noResultsFound').css('display', 'none');
+        } else {
+            $('#noResultsFound').css('display', 'block');
+        }
+
+        return result;
     })
 });
