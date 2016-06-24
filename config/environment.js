@@ -13,10 +13,25 @@ module.exports = function(environment) {
       }
     },
 
+    JamDB: {
+        url: 'http://localhost:1212',
+        namespace: 'Preprints',
+        authorizer: 'jam-jwt'
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+      'ember-simple-auth': {
+            authenticationRoute: 'login',
+            routeAfterAuthentication: 'index'
+        },
+    //Change here to switch back to mirage calls. Examples fo calls in index.js
+      'ember-cli-mirage': {
+            enabled: false
+        }
   };
 
   if (environment === 'development') {
