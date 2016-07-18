@@ -34,6 +34,7 @@
 
             </div> <!--END COL 7 DIV-->
             <div class="col-lg-5"> <!--COL 5 DIV-->
+                <button {{action 'delete' model.preprint}}>Delete</button>
                 {{preprint-form title=model.preprint.title authors=model.preprint.authors
                 abstract=model.preprint.abstract buttonText="Save changes" actionName="updatePreprint"
                 buttonAction=(action "updatePreprint") id=model.id}}

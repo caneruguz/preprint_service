@@ -11,12 +11,12 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand hidden-sm hidden-xs" href="/"><img src="vendor/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"/> Open Science Framework</a>
-                <a class="navbar-brand visible-sm visible-xs" href="/"><img src="vendor/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"/> OSF</a>
+                {{#link-to "index" class="navbar-brand hidden-sm hidden-xs"}}<img src="vendor/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"/> Open Science Framework{{/link-to}}
+                {{#link-to "index" class="navbar-brand visible-sm visible-xs"}}<img src="vendor/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"/> OSF{{/link-to}}
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li id="osfNavDashboard"><a href="/">Dashboard</a></li>
+                    <li id="osfNavDashboard">{{#link-to "index"}}Dashboard{{/link-to}}</li>
                     <li id="osfNavMyProjects"><a href="/myprojects/">My Projects</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Browse<span class="caret"></span></a>

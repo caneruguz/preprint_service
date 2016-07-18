@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-    updateRecordUrlTemplate: '{+host}/{+namespace}/documents{/namespaceId}.{collectionId}.{id}',
-    findRecordUrlTemplate: '{+host}/{+namespace}/documents{/namespaceId}.{collectionId}.{id}',
-
-    findAllUrlTemplate: '{+host}/{+namespace}/collections{/namespaceId}.{collectionId}/documents',
     createRecordUrlTemplate: '{+host}/{+namespace}/collections{/namespaceId}.{collectionId}/documents',
+    findRecordUrlTemplate: '{+host}/{+namespace}/documents{/namespaceId}.{collectionId}.{id}',
+    findAllUrlTemplate: '{+host}/{+namespace}/collections{/namespaceId}.{collectionId}/documents',
+    updateRecordUrlTemplate: '{+host}/{+namespace}/documents{/namespaceId}.{collectionId}.{id}',
+    deleteRecordUrlTemplate: '{+host}/{+namespace}/documents{/namespaceId}.{collectionId}.{id}',
 
     queryUrlTemplate: '{+host}/{+namespace}/collections{/namespaceId}.{collectionId{/search}',
     queryRecordUrlTemplate: '{+host}/{+namespace}/collections{/namespaceId}.{collectionId{/search}',
